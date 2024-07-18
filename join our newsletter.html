@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  background-image: url(img/salon\ b.jpg);
+  background-size:cover;
+}
+.form-container{
+  width:80%;
+  margin:auto;
+  background-color:rgba(255,255,255,0.3);
+  padding:10px;
+  overflow:hidden;
+}
+
+h1,p{
+  text-align:center;
+  color:#fdfdfd;
+}
+h1{
+  text-shadow:2px 2px #000;
+  font-size:40px;
+}
+form{
+  padding:10px;
+  margin:5px;
+}
+.input-type{
+  display:inline-block;
+  width:50%;
+  padding:5px;
+  margin:10px 5px;
+  border:transparent;
+  color:#111;
+  flex-shrink:1;
+  border-radius:10px;
+}
+label{
+text-align:center;
+  color:#003456;
+  width:20%;
+  font-weight:bold;
+  font-size:20px;
+  text-shadow:1px 1px #00abcd;
+  flex-shrink:2;
+}
+textarea{
+  height:50px;
+}
+
+.submit{
+  display:block;
+  width:20%;
+  margin:auto;
+  color:#003456;
+  font-size:18px;
+  padding:5px;
+  border-radius:10px;
+  font-weight:bold;
+}
+.input-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+}
+input[type="checkbox"]{
+  margin:5px;
+  padding:5px;
+  width:10%;
+}
+
+@media screen and (max-width:768px){
+  .form-container{
+    width:95%;
+  }
+  .input-container{
+    padding:2px;
+  }
+  label{
+    width:35%;
+    font-size:0.85em;
+  }
+  .input-type{
+    width:45%;
+  }
+  .submit{
+    width:50%;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">Salon Form</h1>
+<p id="description">Take this survey to improve our salon</p>
+<div class="form-container">
+  <form id="survey-form">
+    <div class="input-container">
+      <label id="name-label" for="name">Name</label>
+      <input type="text" id="name" name="name" class="input-type" placeholder="Enter your name" required/>
+    </div>
+
+    <div class="input-container">
+      <label id="email-label" for="email">Email Id</label>
+      <input type="email" id="email" class="input-type" name="email" placeholder="Enter Email ID" required/>
+
+    </div>
+    <div class="input-container">
+      <label id="number-label" for="number">Age</label>
+      <input type="number" name="age" class="input-type" id="number" min="5" max="100" class="" placeholder="Age">
+    </div>
+
+    <div class="input-container">
+      <label>Gender</label>
+      <div class="input-type">
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+      </div>
+    </div>
+    
+    <div class="input-container">
+      <label>Which service do you like the most ?</label>
+      <div class="input-type">
+      <input type="checkbox" name="product" value="1">HairCut
+      <input type="checkbox" name="product" value="2">Facial
+      <input type="checkbox" name="product" value="3">Make Up
+      <input type="checkbox" name="product" value="4">HairColor
+      <input type="checkbox" name="product" value="5">Manicure/pedicure
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label for="comments" class="comment-label">Any Comments or Suggestions?</label>
+      <textarea id="comments" class="input-type" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+
+    <input type="submit" id="submit" class="submit" value="Submit" />
+
+  </form>
+</div>
+</body>
+</html>
